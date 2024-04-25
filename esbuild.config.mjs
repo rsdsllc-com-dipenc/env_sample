@@ -31,7 +31,7 @@ const config = {
   entryPoints: entryPoints,
   minify: process.env.RAILS_ENV == "production",
   outdir: path.join(process.cwd(), "app/assets/builds"),
-  plugins: [rails(), envFilePlugin],
+  plugins: process.env.RAILS_ENV == "production" ? [rails()] : [rails(), envFilePlugin],
   loader: {
     ".png": "file",
   },
