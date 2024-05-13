@@ -12,6 +12,7 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: [:windows, :jruby]
 gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
+gem "foreman"
 
 group :development do
   gem "web-console"
